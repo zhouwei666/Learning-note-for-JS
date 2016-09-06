@@ -1,6 +1,7 @@
-#JS的一些学习笔记
+#JS的一些数组操作函数
 <p><a href="#filterUsing">（一）filter()函数的用法</a></p>
 <p><a href="#sliceUsing">（二）slice()函数的用法</a></p>
+<p><a href="#concatUsing">（三）concat()函数的用法</a></p>
 ***
 <h2>filter()函数</h2>
 <div id="filterUsing">
@@ -45,4 +46,13 @@ document.write(filtered);
 arrayObject.slice(start,end)
 </code></pre>
 <p>其中start是必需项，规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。end是可选项，规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</p>
+</div>
+<h2>concat()函数</h2>
+<div id="concatUsing">
+<p>concat()方法用于连接两个或多个数组。<strong>该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。</strong></p>
+<h3>语法</h3>
+<pre><code>
+arrayObject.concat(arrayX,arrayX,......,arrayX);
+</code></pre>
+<p>arrayX可以是具体的值，也可以是数组对象,可以是任意多个。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。</p>
 </div>
