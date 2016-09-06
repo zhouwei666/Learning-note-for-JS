@@ -1,7 +1,7 @@
 #JS的一些数组操作函数
-<p><a href="#filterUsing">（一）filter()函数的用法</a></p>
-<p><a href="#sliceUsing">（二）slice()函数的用法</a></p>
-<p><a href="#concatUsing">（三）concat()函数的用法</a></p>
+<p><a href="#filterUsing">（一）filter()函数</a></p>
+<p><a href="#sliceUsing">（二）slice()函数</a></p>
+<p><a href="#concatUsing">（三）concat()函数</a></p>
 ***
 <h2>filter()函数</h2>
 <div id="filterUsing">
