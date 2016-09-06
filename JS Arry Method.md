@@ -2,6 +2,7 @@
 <p><a href="#filterUsing">（一）filter()函数</a></p>
 <p><a href="#sliceUsing">（二）slice()函数</a></p>
 <p><a href="#concatUsing">（三）concat()函数</a></p>
+<p><a href="#spliceUsing">（四）splice()函数</a></p>
 ***
 <h2>filter()函数</h2>
 <div id="filterUsing">
@@ -55,4 +56,15 @@ arrayObject.slice(start,end)
 arrayObject.concat(arrayX,arrayX,......,arrayX);
 </code></pre>
 <p>arrayX可以是具体的值，也可以是数组对象,可以是任意多个。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。</p>
+</div>
+<h2>splice()函数</h2>
+<div id="spliceUsing">
+<p>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。<strong>注意：该方法会改变原始数组</strong></p>
+<h3>语法</h3>
+<pre><code>
+arrayObject.splice(index,howmany,item1,.....,itemX);
+</code></pre>
+<p>
+其中index是必需项，整数，规定添加/删除项目的位置，如果是负数，则会加上数组的长度作为start的值；howmany必需，表示要删除的项目数量，如果设置为 0或者负数，则不会删除项目；<strong>item1,...itemX可选项，表示向数组对象中添加新的项目。</strong>
+</p>
 </div>
