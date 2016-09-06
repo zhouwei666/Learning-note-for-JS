@@ -3,6 +3,7 @@
 <p><a href="#sliceUsing">（二）slice()函数</a></p>
 <p><a href="#concatUsing">（三）concat()函数</a></p>
 <p><a href="#spliceUsing">（四）splice()函数</a></p>
+<p><a href="#mapUsing">（五）map()函数</a></p>
 ***
 <h2>filter()函数</h2>
 <div id="filterUsing">
@@ -68,3 +69,21 @@ arrayObject.splice(index,howmany,item1,.....,itemX);
 其中index是必需项，整数，规定添加/删除项目的位置，如果是负数，则会加上数组的长度作为start的值；howmany必需，表示要删除的项目数量，如果设置为 0或者负数，则不会删除项目；<strong>item1,...itemX可选项，表示向数组对象中添加新的项目。</strong>
 </p>
 </div>
+<h2>map()函数</h2>
+<div id="mapUsing">
+<p>对数组的每个元素调用定义的回调函数并返回包含结果的数组，该返回数组是一个新的数组，其中的每个元素均为关联的原始数组元素的回调函数返回值。</p>
+<h3>语法</h3>
+<pre><code>
+array1.map(callbackfn[, thisArg]);
+//回调函数语法
+function callbackfn(value, index, array1)
+</code></pre>
+<table>
+<tr><th>回调参数</th><th>定义</th></tr>
+<tr><td>value</td><td>数组元素的值</td></tr>
+<tr><td>index</td><td>数组元素的数字索引</td></tr>
+<tr><td>array1</td><td>包含该元素的数组对象</td></tr>
+</table>
+</div>
+
+
