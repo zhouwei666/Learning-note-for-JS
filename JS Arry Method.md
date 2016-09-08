@@ -4,6 +4,7 @@
 <p><a href="#concatUsing">（三）concat()函数</a></p>
 <p><a href="#spliceUsing">（四）splice()函数</a></p>
 <p><a href="#mapUsing">（五）map()函数</a></p>
+<p><a href="#applyUsing">（六）apply()和call()函数</a></p>
 ***
 <h2>filter()函数</h2>
 <div id="filterUsing">
@@ -85,5 +86,25 @@ function callbackfn(value, index, array1)
 <tr><td>array1</td><td>包含该元素的数组对象</td></tr>
 </table>
 </div>
-
+<h2>call()和apply()函数</h2>
+<div id="applyUsing">
+<p>call()和apply()用法一样，区别在于参数的形式不同，前者是详细参数，后者是一个数组，数组的元素对应前者的详细参数。</p>
+<h3>apply()</h3>
+<pre><code>
+Function.apply(obj,arr);
+</code></pre>
+<p>obj是一个对象，它将代替Function的this对象。通俗讲，obj将会调用Function函数，且调用的参数为arr数组的每个元素。假如arr=[par1,par2,par3,par4]，Function执行的时候就是Function(ar1,par2,par3,par4)。由于apply()的特性，可以有一些巧妙的用法：</p>
+<p><strong>1.取数组的最值问题：</strong>
+<pre><code>
+var max = Math.max.apply(null,arr);
+</code></pre>
+</p>
+<p>由于Math.max(par1,par2,par3,...)是成立的，而不存在Math.max([par1,par2,par3,...])，因此使用apply方法可以很方便地求取数组元素中的最值问题（min等同于max）。<strong>注：这里apply的第一个参数取的null，是因为不需要有对象调用Math.max（）方法，只需要执行该方法即可。</strong></p>
+<p><strong>2.数组合并问题：</strong>
+<pre><code>
+Array.prototype.push.apply(arr1,arr2);
+</code></pre>
+</p>
+<p>由于push方法也是对详细参数的一个操作，不能将数组作为push的参数，所以apply方法能够简化数组的合并操作。详细请看<a href="#">push()和pop()方法。</a></p>
+</div>
 
