@@ -105,6 +105,6 @@ var max = Math.max.apply(null,arr);
 Array.prototype.push.apply(arr1,arr2);
 </code></pre>
 </p>
-<p>由于push方法也是对详细参数的一个操作，不能将数组作为push的参数，所以apply方法能够简化数组的合并操作。详细请看<a href="#">push()和pop()方法。</a></p>
+<p>由于push方法也是对详细参数的一个操作，将数组作为push的参数添加的是一个数组而非每个元素，所以apply方法能够简化数组的合并操作。<strong>注：push(pop)方法是在原数组最后添加(删除)元素，对原数组进行了修改（数组长度、内容都变化了）。</strong></p>
 </div>
 
