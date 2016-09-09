@@ -4,7 +4,7 @@
 <p><a href="#concatUsing">（三）concat()函数</a></p>
 <p><a href="#spliceUsing">（四）splice()函数</a></p>
 <p><a href="#mapUsing">（五）map()函数</a></p>
-<p><a href="#applyUsing">（六）apply()和call()函数</a></p>
+<p><a href="#applyUsing">（六）apply()、call()和bind()函数</a></p>
 ***
 <h2>filter()函数</h2>
 <div id="filterUsing">
@@ -86,7 +86,7 @@ function callbackfn(value, index, array1)
 <tr><td>array1</td><td>包含该元素的数组对象</td></tr>
 </table>
 </div>
-<h2>call()和apply()函数</h2>
+<h2>call()、apply()和bind()函数</h2>
 <div id="applyUsing">
 <p>call()和apply()用法一样，区别在于参数的形式不同，前者是详细参数，后者是一个数组，数组的元素对应前者的详细参数。</p>
 <h3>apply()</h3>
@@ -106,5 +106,13 @@ Array.prototype.push.apply(arr1,arr2);
 </code></pre>
 </p>
 <p>由于push方法也是对详细参数的一个操作，将数组作为push的参数添加的是一个数组而非每个元素，所以apply方法能够简化数组的合并操作。<strong>注：push(pop)方法是在原数组最后添加(删除)元素，对原数组进行了修改（数组长度、内容都变化了）。</strong></p>
+<h3>bind()</h3>
+<p>bind()是ECMAScript 5.1新增的扩展方法（IE8/7/6不支持），bind与call很相似，例如，可接受的参数都分为两部分，且第一个参数都是作为执行时函数上下文中的this的对象。不同点有二：</p>
+<p>1.bind（）返回值是改变上下文this后的函数，而call（）是改变上下文this并执行函数</p>
+<pre><code>
+var a = func.bind(obj,para1,para2,...);//a的值是func(),它由obj调用，且参数为para1,para2,...
+var b = func.call(obj,para1,para2,...);//b的值是obj执行函数func(para1,para2,...)的结果
+</code></pre>
+<p></p>
 </div>
 
