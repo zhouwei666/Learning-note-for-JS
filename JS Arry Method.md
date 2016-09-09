@@ -86,8 +86,8 @@ function callbackfn(value, index, array1)
 <tr><td>array1</td><td>包含该元素的数组对象</td></tr>
 </table>
 </div>
-<h2>call()、apply()和bind()函数</h2>
-<div id="applyUsing">
+<h2 id="applyUsing">call()、apply()和bind()函数</h2>
+<div>
 <p>call()和apply()用法一样，区别在于参数的形式不同，前者是详细参数，后者是一个数组，数组的元素对应前者的详细参数。</p>
 <h3>apply()</h3>
 <pre><code>
@@ -113,6 +113,20 @@ Array.prototype.push.apply(arr1,arr2);
 var a = func.bind(obj,para1,para2,...);//a的值是func(),它由obj调用，且参数为para1,para2,...
 var b = func.call(obj,para1,para2,...);//b的值是obj执行函数func(para1,para2,...)的结果
 </code></pre>
-<p></p>
+<p>2.后面的参数在使用上的区别</p>
+<pre><code>
+function fun(a,b,c){
+    console.log(a,b,c);
+}
+var funEx = fun.bind(null,'A_Ex');
+fun('A','B','C');//输出 A B C
+fun.call(null,'A');//输出  A undefined undefined
+funEx('B','C');//输出  A_Ex B C
+funEx('B');//输出  A_Ex B undefined
+funEx('A','B','C');//输出  A_Ex A B
+</code></pre>
+<p>
+由此可以看出，call是把第二个及以后的参数作为fun方法的实参传进去，而bind虽说也是获取第二个及以后的参数用于之后方法的执行，但是fun_Ex中传入的实参则是在bind中传入参数的基础上往后排的。
+</p>
 </div>
 
