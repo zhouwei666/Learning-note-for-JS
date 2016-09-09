@@ -6,8 +6,8 @@
 <p><a href="#mapUsing">（五）map()函数</a></p>
 <p><a href="#applyUsing">（六）apply()、call()和bind()函数</a></p>
 ***
-<h2>filter()函数</h2>
-<div id="filterUsing">
+<h2 id="filterUsing">filter()函数</h2>
+<div>
 <h3>filter()基本语法：</h3>
 <pre>
   <code>arr.filter(callback[, thisArg]</code>
@@ -40,8 +40,8 @@ document.write(filtered);
 </code>
 </pre>
 </div>
-<h2>slice()函数</h2>
-<div id="sliceUsing">
+<h2 id="sliceUsing">slice()函数</h2>
+<div>
 <h3>定义和用法:</h3>
 <p>slice() 方法返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。</p>
 <p><strong>注意：该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。</strong></p>
@@ -50,8 +50,8 @@ arrayObject.slice(start,end)
 </code></pre>
 <p>其中start是必需项，规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。end是可选项，规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</p>
 </div>
-<h2>concat()函数</h2>
-<div id="concatUsing">
+<h2 id="concatUsing">concat()函数</h2>
+<div>
 <p>concat()方法用于连接两个或多个数组。<strong>该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。</strong></p>
 <h3>语法</h3>
 <pre><code>
@@ -59,8 +59,8 @@ arrayObject.concat(arrayX,arrayX,......,arrayX);
 </code></pre>
 <p>arrayX可以是具体的值，也可以是数组对象,可以是任意多个。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。</p>
 </div>
-<h2>splice()函数</h2>
-<div id="spliceUsing">
+<h2 id="spliceUsing">splice()函数</h2>
+<div>
 <p>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。<strong>注意：该方法会改变原始数组</strong></p>
 <h3>语法</h3>
 <pre><code>
@@ -70,8 +70,8 @@ arrayObject.splice(index,howmany,item1,.....,itemX);
 其中index是必需项，整数，规定添加/删除项目的位置，如果是负数，则会加上数组的长度作为start的值；howmany必需，表示要删除的项目数量，如果设置为 0或者负数，则不会删除项目；<strong>item1,...itemX可选项，表示向数组对象中添加新的项目。</strong>
 </p>
 </div>
-<h2>map()函数</h2>
-<div id="mapUsing">
+<h2 id="mapUsing">map()函数</h2>
+<div>
 <p>对数组的每个元素调用定义的回调函数并返回包含结果的数组，该返回数组是一个新的数组，其中的每个元素均为关联的原始数组元素的回调函数返回值。</p>
 <h3>语法</h3>
 <pre><code>
